@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(123 204 239);
+  background-color: rgb(167 221 245);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@ body {
   width: 200px;
   height: 300px;
   transform-style: preserve-3d;
-  transform: perspective(800px) rotateY(200deg);
+  transform: perspective(800px) rotateY(200deg) ;
   transition: 2s;
   animation: auto 5s infinite alternate;
 }
@@ -94,8 +94,8 @@ body {
 }
 @media (max-width: 767px) {
   .box {
-    width: 150px;
-    height: 250px;
+    width: 130px;
+    height: 220px;
   }
   .box::before {
     width: 50px;
