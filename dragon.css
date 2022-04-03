@@ -87,7 +87,7 @@ body {
 }
 @media (max-width: 767px) {
   .box {
-    width: 100px;
-    height: 200px;
+    width: 150px;
+    height: 250px;
   }
 }
