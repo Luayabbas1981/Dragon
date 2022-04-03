@@ -11,6 +11,7 @@ body {
   transform-style: preserve-3d;
   transform: perspective(800px) rotateY(220deg);
   transition: 2s;
+  animation: auto 5s infinite alternate;
 }
 .box::before {
   content: "";
@@ -22,9 +23,9 @@ body {
   transform: rotateX(80deg);
   filter: blur(80px);
 }
-.box:hover {
+/* .box:hover {
   transform: perspective(800px) rotateY(310deg);
-}
+} */
 
 .box div {
   position: absolute;
@@ -83,6 +84,12 @@ body {
   }
   to {
     transform: perspective(800px) rotateX(360deg);
+  }
+}
+
+@keyframes auto {
+  to {
+    transform: perspective(800px) rotateY(310deg);
   }
 }
 @media (max-width: 767px) {
