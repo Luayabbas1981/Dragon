@@ -9,7 +9,7 @@ body {
   width: 200px;
   height: 300px;
   transform-style: preserve-3d;
-  transform: perspective(800px) rotateY(220deg);
+  transform: perspective(800px) rotateY(200deg);
   transition: 2s;
   animation: auto 5s infinite alternate;
 }
