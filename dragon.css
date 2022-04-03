@@ -85,3 +85,9 @@ body {
     transform: perspective(800px) rotateX(360deg);
   }
 }
+@media (max-width:767px){
+.box {
+  width: 150px;
+  height: 250px;
+}
+}
