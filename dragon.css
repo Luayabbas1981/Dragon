@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(167 221 245);
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,12 +7,12 @@ body {
   overflow: hidden;
 }
 .box {
+  
   width: 200px;
   height: 300px;
   transform-style: preserve-3d;
-  transform: perspective(800px) rotateY(200deg) ;
   transition: 2s;
-  animation: auto 5s infinite alternate;
+  animation: spin2 4s infinite alternate;
 }
 .box::before {
   content: "";
@@ -20,12 +20,12 @@ body {
   width: 120px;
   height: 99px;
   bottom: -135px;
-  background-color: #111;
+  background-color: #9c27b0;
   transform: rotateX(80deg);
   filter: blur(80px);
 }
 /* .box:hover {
-  transform: perspective(800px) rotateY(310deg);
+  transform:rotateY(310deg);
 } */
 
 .box div {
@@ -38,36 +38,31 @@ body {
 .box div span {
   position: absolute;
   display: block;
-  width: 100%;
+  width: 80%;
   height: 100%;
-  background: linear-gradient(
-    268deg,
-    rgb(218 230 237) -10%,
-    rgb(253 253 253) 49%
-  );
   border-radius: 50%;
 }
 .box div span:nth-child(1) {
   transform: rotateX(0deg);
   background: linear-gradient(
     268deg,
-    rgb(218 230 237) -10%,
-    rgb(137, 239, 48) 49%
+    rgb(252, 126, 107) -10%,
+    rgb(255, 14, 2) 49%
   );
 }
 .box div span:nth-child(2) {
   transform: rotateX(45deg);
   background: linear-gradient(
     268deg,
-    rgb(218 230 237) -10%,
-    rgb(245, 42, 214) 49%
+    rgb(250, 83, 219) -10%,
+    rgb(255, 0, 217) 49%
   );
 }
 .box div span:nth-child(3) {
   transform: rotateX(-45deg);
   background: linear-gradient(
     268deg,
-    rgb(218 230 237) -10%,
+    rgb(120, 144, 253) -10%,
     rgb(58, 122, 239) 49%
   );
 }
@@ -76,21 +71,24 @@ body {
   background: linear-gradient(
     268deg,
     rgb(218 230 237) -10%,
-    rgb(249, 163, 57) 49%
+    rgb(255, 140, 0) 49%
   );
 }
 @keyframes spin {
   from {
-    transform: perspective(800px) rotateX(0deg);
+    transform:rotateX(0deg);
   }
   to {
-    transform: perspective(800px) rotateX(360deg);
+    transform:rotateX(360deg);
   }
 }
 
-@keyframes auto {
+@keyframes spin2 {
+  from {
+    transform:rotateY(200deg);
+  }
   to {
-    transform: perspective(800px) rotateY(310deg);
+    transform: rotateY(360deg);
   }
 }
 @media (max-width: 767px) {
