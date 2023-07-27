@@ -46,7 +46,7 @@ body {
   transform: rotateX(0deg);
   background: linear-gradient(
     268deg,
-    rgb(252, 126, 107) -10%,
+    #fc7e6b -10%,
     rgb(255, 14, 2) 49%
   );
 }
@@ -54,7 +54,7 @@ body {
   transform: rotateX(45deg);
   background: linear-gradient(
     268deg,
-    rgb(250, 83, 219) -10%,
+    #fa53db -10%,
     rgb(255, 0, 217) 49%
   );
 }
@@ -62,7 +62,7 @@ body {
   transform: rotateX(-45deg);
   background: linear-gradient(
     268deg,
-    rgb(120, 144, 253) -10%,
+    #7890fd -10%,
     rgb(58, 122, 239) 49%
   );
 }
@@ -71,7 +71,7 @@ body {
   background: linear-gradient(
     268deg,
     rgb(218 230 237) -10%,
-    rgb(255, 140, 0) 49%
+    #ff8c00 49%
   );
 }
 @keyframes spin {
