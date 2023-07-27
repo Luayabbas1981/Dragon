@@ -19,7 +19,6 @@ setInterval(() => {
       randomColor = Math.floor(Math.random() * colorsArray.length);
       item.style.background = colorsArray[randomColor];
     } while (previous === randomColor);
-    console.log(randomColor);
     previous = randomColor;
     box.style = `--before:${colorsArray[randomColor]}`;
   });
