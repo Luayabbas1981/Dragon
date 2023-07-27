@@ -14,11 +14,15 @@ let index = 0
 
 setInterval(() => {
   let newArray=  colorsArray.sort(() => Math.random() - 0.5).slice(0,4);
+  
   spans.forEach((item,i) => {
     item.style.background = newArray[i];
     item.setAttribute("id",newArray[i])
   });
-  setInterval(() => {
+ 
+}, 4000);
+
+setInterval(() => {
     box.style = `--before:${spans[index].id}`;
     index++
     console.log(index)
@@ -26,4 +30,3 @@ setInterval(() => {
     index = 0
    }
 }, 500);
-}, 4000);
