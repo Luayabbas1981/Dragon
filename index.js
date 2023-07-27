@@ -10,16 +10,13 @@ let colorsArray = [
   "#00e2ffe6",
 ];
 
-let previous = -1;
+
 
 setInterval(() => {
-  spans.forEach((item) => {
-    let randomColor;
-    do {
-      randomColor = Math.floor(Math.random() * colorsArray.length);
-      item.style.background = colorsArray[randomColor];
-    } while (previous === randomColor);
-    previous = randomColor;
-    box.style = `--before:${colorsArray[randomColor]}`;
+    let newArray=  colorsArray.sort(() => Math.random() - 0.5).slice(0,4);
+  
+  spans.forEach((item,i) => {
+    item.style.background = newArray[i];
+    box.style = `--before:${newArray[i]}`;
   });
 }, 4000);
