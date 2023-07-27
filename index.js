@@ -13,10 +13,10 @@ let colorsArray = [
 
 
 setInterval(() => {
-    let newArray=  colorsArray.sort(() => Math.random() - 0.5).slice(0,4);
-  
+  let newArray=  colorsArray.sort(() => Math.random() - 0.5).slice(0,4);
   spans.forEach((item,i) => {
     item.style.background = newArray[i];
+    item.setAttribute("id",newArray[i])
     box.style = `--before:${newArray[i]}`;
   });
 }, 4000);
