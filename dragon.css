@@ -33,7 +33,7 @@ body {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  animation:spin  4s infinite linear;
+  animation:spin  4s 2s infinite linear;
 }
 .box div span {
   position: absolute;
@@ -74,6 +74,23 @@ body {
     #ff8c00 49%
   );
 }
+.neon1,.neon2{
+  position: absolute;
+  top: 10%;
+  width: 80px;
+  height: 100px;
+  clip-path: polygon(28% 0, 73% 0, 100% 100%, 0% 100%);
+  background: rgb(5,10,23);
+
+}
+.neon1{
+  left: 25%;
+  transform: rotate(-42deg);
+}
+.neon2{
+  right: 25%;
+  transform: rotate(42deg);
+}
 @keyframes spin {
   from {
     transform:rotateX(0deg);
@@ -100,5 +117,16 @@ body {
     width: 90px;
     height: 90px;
     filter: blur(40px);
+  }
+  .neon1,.neon2{
+    width: 60px;
+    height: 80px;
+    top: 20%;
+  }
+  .neon1{
+    left: 5%;
+  }
+  .neon2{
+    right: 5%;
   }
 }

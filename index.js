@@ -1,5 +1,7 @@
 const box = document.querySelector(".box");
 const spans = document.querySelectorAll(".box>div>span");
+const neonOne = document.querySelector(".neon1")
+const neonTwo = document.querySelector(".neon2")
 let originalColors = [
   "#fc7e6b",
   " #fa53db",
@@ -32,16 +34,20 @@ setInterval(() => {
     item.setAttribute("id", newArray[i]);
   });
 }, 4000);
+setTimeout(() => {
+    setInterval(() => {
+        if (!newArray) {
+          box.style = `--before:${originalColors[originalArrayIndex]}`;
+          originalArrayIndex++;
+        } else {
+          box.style = `--before:${spans[index].id}`;
+         neonOne.style.backgroundImage= `linear-gradient(342deg, rgba(5,10,23,1) 30%, ${spans[index].id} 100%)` 
+         neonTwo.style.backgroundImage= `linear-gradient(342deg, rgba(5,10,23,1) 30%, ${spans[index + 1].id} 100%)` 
+          index++;
+          if (index === 3) {
+            index = 0;
+          }
+        }
+      }, 500);
+}, 2000);
 
-setInterval(() => {
-  if (!newArray) {
-    box.style = `--before:${originalColors[originalArrayIndex]}`;
-    originalArrayIndex++;
-  } else {
-    box.style = `--before:${spans[index].id}`;
-    index++;
-    if (index === 3) {
-      index = 0;
-    }
-  }
-}, 500);
