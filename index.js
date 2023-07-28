@@ -34,7 +34,7 @@ setInterval(() => {
 }, 4000);
 
 setInterval(() => {
-  if (newArray === undefined) {
+  if (!newArray) {
     box.style = `--before:${originalColors[originalArrayIndex]}`;
     originalArrayIndex++;
   } else {
